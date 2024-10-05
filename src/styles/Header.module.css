@@ -63,3 +63,12 @@
 .navItem a:hover {
   text-decoration: underline;
 }
+.languageDropdown {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
