@@ -1,4 +1,6 @@
-import styles from '../styles/ProductCard.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import styles from '../styles/ProductCard.module.css';
 
 export default function ProductCard({ product }) {
   return (
@@ -6,7 +8,11 @@ export default function ProductCard({ product }) {
       <img src={product.image} alt={product.title} className={styles.image} />
       <h3 className={styles.title}>{product.title}</h3>
       <p className={styles.price}>${product.price.toFixed(2)}</p>
-      <button className={styles.button}>Add to Cart</button>
+
+      {/* Heart Icon instead of Add to Cart Button */}
+      <div className={styles.iconSection}>
+        <FontAwesomeIcon icon={faHeart} className={styles.heartIcon} />
+      </div>
     </div>
-  )
+  );
 }
