@@ -1,0 +1,88 @@
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  position: relative; /* Ensure it's positioned relative to the rest of the layout */
+}
+
+/* Sidebar Header */
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.sortDropdown{
+margin-right: -850px;
+margin-top: -30px;
+}
+
+.leftContent {
+  display: flex;
+  align-items: center;
+}
+
+.itemCount {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.filterToggle {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* Sort dropdown detached from sidebar */
+.sortDropdown {
+  position: absolute; /* Detached from the sidebar */
+  top: 0; /* Align it at the top */
+  right: 0; /* Position it on the right of the screen */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+/* Filters */
+.filterOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filterOption {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.filterName {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #333;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.filterDropdown {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+}

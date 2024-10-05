@@ -1,95 +1,66 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import Head from "next/head";
+import { useState, useEffect } from "react";
+import Header from "../components/Header";
+import ProductGrid from "../components/ProductGrid";
+import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
+import { fetchProducts } from "../utils/api";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    async function loadProducts() {
+      const data = await fetchProducts();
+      setProducts(data);
+      setLoading(false);
+    }
+    loadProducts();
+  }, []);
+
+  return (
+    <div style={{ padding: "0 20px" }}>
+      <Head>
+        <title>Discover Our Products</title>
+        <link rel="icon" href="/favicon.ico" />
+        {/* No need to include external font link as it's loaded locally */}
+      </Head>
+
+      <Header />
+
+      <main style={{ textAlign: "center", marginTop: "50px", marginBottom: "50px" }}>
+        <h1
+          style={{
+            fontSize: "36px",
+            fontWeight: "bold",
+            marginBottom: "10px",
+            fontFamily: "'Simplon Norm', sans-serif" // Use the locally loaded font
+          }}
+        >
+          Discover Our Products
+        </h1>
+        <h3
+          style={{
+            fontSize: "18px",
+            color: "#555",
+            maxWidth: "700px",
+            margin: "0 auto", // Center the text
+            lineHeight: "1.6",
+            fontFamily: "'Simplon Norm', sans-serif" // Apply the Simplon Norm font
+          }}
+        >
+          Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus scelerisque. Dolor integer scelerisque nibh amet mi ut elementum dolor.
+        </h3>
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
+          <Sidebar />
+          {loading ? <p>Loading...</p> : <ProductGrid products={products} />}
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      <Footer />
     </div>
   );
 }
