@@ -9,7 +9,6 @@ export default function ProductCard({ product }) {
       <h3 className={styles.title}>{product.title}</h3>
       <p className={styles.price}>${product.price.toFixed(2)}</p>
 
-      {/* Heart Icon instead of Add to Cart Button */}
       <div className={styles.iconSection}>
         <FontAwesomeIcon icon={faHeart} className={styles.heartIcon} />
       </div>

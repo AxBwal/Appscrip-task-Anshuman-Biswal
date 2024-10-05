@@ -3,3 +3,11 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
+
+/* Product Grid styles for mobile */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 10px;
+  }
+}

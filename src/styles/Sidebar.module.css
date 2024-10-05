@@ -86,3 +86,23 @@ margin-top: -30px;
   background-color: #fff;
   font-size: 14px;
 }
+
+
+
+/* Sidebar styles for mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sortDropdown {
+    margin-right: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .filterOptions {
+    flex-direction: column;
+  }
+}

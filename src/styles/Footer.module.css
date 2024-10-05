@@ -83,3 +83,26 @@
   text-align: center;
   font-size: 0.8em;
 }
+
+
+/* Footer styles for mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .topSection, .middleSection, .bottomSection {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter, .contactInfo, .companyInfo, .quickLinks, .followUs {
+    margin-bottom: 20px;
+    width: 100%; /* Make sections full width */
+  }
+
+  .paymentIcons {
+    justify-content: center;
+  }
+}

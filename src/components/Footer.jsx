@@ -58,13 +58,7 @@ export default function Footer() {
       <div className={styles.bottomSection}>
         <h3>mettā muse ACCEPTS</h3>
         <div className={styles.paymentIcons}>
-          {/* Replace with actual payment icons */}
-          <span>GPay</span>
-          <span>Mastercard</span>
-          <span>PayPal</span>
-          <span>Amex</span>
-          <span>ApplePay</span>
-          <span>OPay</span>
+         <img src="/assets/Frame.png" alt="" />
         </div>
       </div>
       <div className={styles.copyright}>
