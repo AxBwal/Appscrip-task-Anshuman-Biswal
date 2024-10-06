@@ -1,4 +1,4 @@
-/* General Header Styles */
+
 .header {
   padding: 20px 30px;
   background-color: white;
@@ -9,13 +9,12 @@
   justify-content: center;
 }
 
-/* Top Section: Logo, Icons, and Language Selector */
 .topSection {
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Align items to left and right */
+  justify-content: space-between;
   align-items: center;
-  position: relative; /* Needed for absolute positioning of logoText */
+  position: relative; 
 }
 
 .leftSection {
@@ -24,13 +23,13 @@
 }
 
 .menuIcon {
-  display: none; /* Hidden by default */
+  display: none; 
   cursor: pointer;
-  margin-right: 10px; /* Space between menu icon and logo image */
+  margin-right: 10px; 
 }
 
 .logoImageSection {
-  flex: 0 0 auto; /* Prevents stretching */
+  flex: 0 0 auto; 
 }
 
 .logoImage {
@@ -39,7 +38,7 @@
 }
 
 .logoText {
-  position: absolute; /* Allows centering independently of flex items */
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -48,7 +47,7 @@
 }
 
 .icons {
-  flex: 0 0 auto; /* Prevents stretching */
+  flex: 0 0 auto; 
   display: flex;
   align-items: center;
   gap: 20px;
@@ -60,14 +59,14 @@
   transition: color 0.3s ease;
 }
 
-/* Language Dropdown Styling */
+
 .languageDropdown {
   padding: 5px;
   font-size: 14px;
   cursor: pointer;
 }
 
-/* Navbar Styles */
+
 .nav {
   margin-top: 20px;
 }
@@ -78,7 +77,7 @@
   margin: 0;
   display: flex;
   justify-content: center;
-  gap: 40px; /* More space between links */
+  gap: 40px; 
 }
 
 .navItem a {
@@ -89,7 +88,6 @@
   font-weight: 700;
 }
 
-/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
   .topSection {
     padding: 10px;
@@ -97,7 +95,7 @@
   }
 
   .menuIcon {
-    display: block; /* Show menu icon on mobile */
+    display: block; 
   }
 
   .leftSection {
@@ -106,7 +104,7 @@
   }
 
   .logoImageSection {
-    margin-left: 10px; /* Space between menu icon and logo image */
+    margin-left: 10px; 
   }
 
   .logoText {
@@ -114,20 +112,20 @@
   }
 
   .icons {
-    gap: 10px; /* Adjusted gap for mobile */
+    gap: 10px; 
   }
 
   .icon {
-    font-size: 20px; /* Adjust icon size for mobile */
+    font-size: 20px; 
   }
 
-  /* Hide specific icons in mobile view */
+ 
   .icons .faBagShopping,
   .languageDropdown {
     display: none;
   }
 
-  /* Navigation Menu Styling for Mobile */
+ 
   .nav {
     width: 100%;
     background-color: white;

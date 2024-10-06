@@ -1,17 +1,22 @@
+
 @font-face {
   font-family: 'Simplon Norm';
-  src: url('/fonts/SimplonNorm/SimplonNorm-Regular.ttf') format('truetype'),
-       url('/fonts/SimplonNorm/SimplonNorm-Bold.ttf') format('truetype');
-  font-weight: 400;
+  src: url('/fonts/SimplonNorm-Regular.woff2') format('woff2'),
+       url('/fonts/SimplonNorm-Regular.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Simplon Norm';
-  src: url('/fonts/SimplonNorm/SimplonNorm-Bold.ttf') format('truetype');
-  font-weight: 700;
+  src: url('/fonts/SimplonNorm-Bold.woff2') format('woff2'),
+       url('/fonts/SimplonNorm-Bold.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
+
 
 
 * {

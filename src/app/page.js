@@ -27,7 +27,6 @@ export default function Home() {
       <Head>
         <title>Discover Our Products</title>
         <link rel="icon" href="/favicon.ico" />
-        {/* No need to include external font link as it's loaded locally */}
       </Head>
 
       <Header />
@@ -35,26 +34,32 @@ export default function Home() {
       <main style={{ textAlign: "center", marginTop: "50px", marginBottom: "50px" }}>
         <h1
           style={{
-            fontSize: "36px",
-            fontWeight: "bold",
+            fontSize: "25px",
+            fontWeight: "20px",
             marginBottom: "10px",
-            fontFamily: "'Simplon Norm', sans-serif" // Use the locally loaded font
+            fontFamily: "'Simplon Norm', sans-serif",
+            textAlign: "center",
           }}
         >
           Discover Our Products
         </h1>
+
         <h3
           style={{
-            fontSize: "18px",
+            fontSize: "15px",
             color: "#555",
             maxWidth: "700px",
-            margin: "0 auto", // Center the text
+            margin: "0 auto",
             lineHeight: "1.6",
-            fontFamily: "'Simplon Norm', sans-serif" // Apply the Simplon Norm font
+            fontWeight: "10px",
+            fontFamily: "'Simplon Norm', sans-serif",
+            textAlign: "center", // Center the text within h3
           }}
         >
-          Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus scelerisque. Dolor integer scelerisque nibh amet mi ut elementum dolor.
+          Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus scelerisque.
+          Dolor integer scelerisque nibh amet mi ut elementum dolor.
         </h3>
+
         <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
           <Sidebar />
           {loading ? <p>Loading...</p> : <ProductGrid products={products} />}

@@ -1,35 +1,31 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUser, faHeart, faBagShopping } from '@fortawesome/free-solid-svg-icons';
-import { IoIosMenu } from "react-icons/io"; // Import the menu icon
+import { IoIosMenu } from "react-icons/io"; 
 import { useState, useEffect } from 'react';
 import styles from '../styles/Header.module.css';
 
 export default function Header() {
   const [selectedLanguage, setSelectedLanguage] = useState('English');
-  const [isMobile, setIsMobile] = useState(false); // State to track mobile screen
-  const [menuOpen, setMenuOpen] = useState(false); // State to toggle menu
+  const [isMobile, setIsMobile] = useState(false); 
+  const [menuOpen, setMenuOpen] = useState(false); 
 
   const handleLanguageChange = (e) => {
     setSelectedLanguage(e.target.value);
   };
 
-  // Effect to check screen size
+ 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    // Initial check
     handleResize();
-    // Add event listener
     window.addEventListener('resize', handleResize);
-    // Clean up
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
     <header className={styles.header}>
       <div className={styles.topSection}>
-        {/* Left Section: Menu Icon and Logo Image */}
         <div className={styles.leftSection}>
           {isMobile && (
             <div className={styles.menuIcon} onClick={() => setMenuOpen(!menuOpen)}>
@@ -41,10 +37,8 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Center: Logo Text */}
         <div className={styles.logoText}>LOGO</div>
 
-        {/* Right Section: Icons */}
         <div className={styles.icons}>
           <FontAwesomeIcon icon={faSearch} className={styles.icon} />
           <FontAwesomeIcon icon={faHeart} className={styles.icon} />
@@ -66,7 +60,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Navigation Menu */}
+   
       {(!isMobile || menuOpen) && (
         <nav className={styles.nav}>
           <ul className={styles.navList}>
