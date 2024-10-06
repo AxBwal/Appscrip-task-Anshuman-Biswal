@@ -52,7 +52,7 @@ export default function Sidebar() {
 
   return (
     <div>
-      {/* Header Container */}
+      
       <div className={styles.headerContainer}>
         <div className={styles.leftContent}>
           <span className={styles.itemCount}>{productCount} ITEMS</span>
@@ -64,11 +64,11 @@ export default function Sidebar() {
           </button>
         </div>
         <div className={styles.rightContent}>
-          {/* Additional content if needed */}
+         
         </div>
       </div>
 
-      {/* Main Content */}
+     
       <div className={styles.mainContent}>
         {isFilterVisible && (
           <aside className={styles.sidebar}>
@@ -82,14 +82,14 @@ export default function Sidebar() {
                     )}
                   </span>
 
-                  {/* Check for 'CUSTOMIZABLE' */}
+                 
                   {option.type === 'checkbox' && (
                     <label className={styles.checkboxLabel}>
                       <input type="checkbox" />
                     </label>
                   )}
 
-                  {/* Dropdown with checkboxes for other filters */}
+                 
                   {option.type === 'dropdown' && openDropdown === index && (
                     <div className={styles.dropdownContent}>
                       {option.name === 'IDEAL FOR' && (
@@ -108,7 +108,7 @@ export default function Sidebar() {
                         </>
                       )}
 
-                      {/* Default Dropdowns for other options */}
+                     
                       {option.name !== 'IDEAL FOR' && (
                         <select className={styles.filterDropdown}>
                           {option.options.map((opt, idx) => (

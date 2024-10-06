@@ -9,7 +9,6 @@ import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import { fetchProducts } from "../utils/api";
 import SkeletonProduct from "../components/SkeletonProduct"; 
-
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -61,7 +60,7 @@ export default function Home() {
           Dolor integer scelerisque nibh amet mi ut elementum dolor.
         </h3>
         <div >
-          <select style={{marginLeft:"824px",padding:"5px"}} >
+          <select className="recommended"  >
             <option>RECOMMENDED</option>
             <option>NEWEST FIRST</option>
             <option>POPULAR</option>

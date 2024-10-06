@@ -54,7 +54,7 @@ export default function Footer() {
             <span>LinkedIn Icon</span>
           </div>
 
-          {/* mettā muse ACCEPTS section right below FOLLOW US */}
+         
           <div className={styles.mettaMuseAccepts}>
             <h3>mettā muse ACCEPTS</h3>
             <div className={styles.paymentIcons}>

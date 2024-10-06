@@ -1,24 +1,20 @@
-
 @font-face {
-  font-family: 'Simplon Norm';
-  src: url('/fonts/SimplonNorm-Regular.woff2') format('woff2'),
-       url('/fonts/SimplonNorm-Regular.woff') format('woff');
+  font-family: "Simplon Norm";
+  src: url("/fonts/SimplonNorm-Regular.woff2") format("woff2"),
+    url("/fonts/SimplonNorm-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Simplon Norm';
-  src: url('/fonts/SimplonNorm-Bold.woff2') format('woff2'),
-       url('/fonts/SimplonNorm-Bold.woff') format('woff');
+  font-family: "Simplon Norm";
+  src: url("/fonts/SimplonNorm-Bold.woff2") format("woff2"),
+    url("/fonts/SimplonNorm-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
-
-
-
 
 * {
   box-sizing: border-box;
@@ -27,7 +23,7 @@
 }
 
 body {
-  font-family: 'Simplon Norm', sans-serif;
+  font-family: "Simplon Norm", sans-serif;
   line-height: 1.6;
   color: #333;
 }
@@ -39,12 +35,13 @@ body {
 }
 
 button {
-  font-family: 'Simplon Norm', sans-serif;
+  font-family: "Simplon Norm", sans-serif;
   cursor: pointer;
 }
 
-input, select {
-  font-family: 'Simplon Norm', sans-serif;
+input,
+select {
+  font-family: "Simplon Norm", sans-serif;
 }
 
 /* Mobile styles - hide horizontal overflow */
@@ -53,3 +50,9 @@ input, select {
     overflow-x: hidden;
   }
 }
+
+.recommended {
+  margin-left: 824px;
+  padding: 5px;
+}
+
