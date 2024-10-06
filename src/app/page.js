@@ -47,7 +47,7 @@ export default function Home() {
 
         <h3
           style={{
-            fontSize: "15px",
+            fontSize: "14px",
             color: "#555",
             maxWidth: "700px",
             margin: "0 auto",

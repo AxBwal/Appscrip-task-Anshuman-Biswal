@@ -4,10 +4,10 @@
   gap: 20px;
 }
 
-/* Product Grid styles for mobile */
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 10px;
+    justify-items: center; 
   }
 }
