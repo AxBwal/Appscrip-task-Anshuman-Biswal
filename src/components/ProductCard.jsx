@@ -1,6 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import styles from '../styles/ProductCard.module.css';
+import { CiHeart } from "react-icons/ci";
 
 export default function ProductCard({ product }) {
   return (
@@ -10,7 +9,7 @@ export default function ProductCard({ product }) {
       <p className={styles.price}>${product.price.toFixed(2)}</p>
 
       <div className={styles.iconSection}>
-        <FontAwesomeIcon icon={faHeart} className={styles.heartIcon} />
+      <CiHeart size={"20px"} />
       </div>
     </div>
   );
