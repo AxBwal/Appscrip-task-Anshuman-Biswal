@@ -2,6 +2,10 @@
   background-color: #000;
   color: #fff;
   padding: 40px 20px;
+  width: 100vw; /* Full viewport width */
+  margin: 0; /* Remove any default margin */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  overflow-x: hidden;
 }
 
 .topSection {
@@ -89,6 +93,7 @@
 @media (max-width: 768px) {
   .footer {
     padding: 20px 10px;
+    width: 100vw; /* Ensure the footer is full width on mobile */
   }
 
   .topSection, .middleSection, .bottomSection {
