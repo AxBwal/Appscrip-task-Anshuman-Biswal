@@ -54,15 +54,25 @@ export default function Home() {
             lineHeight: "1.6",
             fontWeight: "10px",
             fontFamily: "'Simplon Norm', sans-serif",
-            textAlign: "center", // Center the text within h3
+            textAlign: "center", 
           }}
         >
           Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus scelerisque.
           Dolor integer scelerisque nibh amet mi ut elementum dolor.
         </h3>
+        <div >
+          <select style={{marginLeft:"824px",padding:"5px"}} >
+            <option>RECOMMENDED</option>
+            <option>NEWEST FIRST</option>
+            <option>POPULAR</option>
+            <option>PRICE: HIGH TO LOW</option>
+            <option>PRICE: LOW TO HIGH</option>
+          </select>
+          </div>
 
         <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
           <Sidebar />
+         
           {loading ? (
             <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
               {Array.from({ length: 6 }).map((_, index) => (

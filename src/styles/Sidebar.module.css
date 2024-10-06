@@ -1,24 +1,13 @@
-/* Sidebar */
-.sidebar {
-  width: 250px;
-  background-color: #ffffff;
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  position: relative; /* Ensure it's positioned relative to the rest of the layout */
-}
-
-/* Sidebar Header */
-.sidebarHeader {
+/* Header Container */
+.headerContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Left items on left, dropdown on right */
   align-items: center;
-  margin-bottom: 20px;
-  font-size: 14px;
-}
-
-.sortDropdown{
-margin-right: -850px;
-margin-top: -30px;
+  padding: 20px;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: -85px;
 }
 
 .leftContent {
@@ -40,15 +29,32 @@ margin-top: -30px;
   padding: 0;
 }
 
-/* Sort dropdown detached from sidebar */
 .sortDropdown {
-  position: absolute; /* Detached from the sidebar */
-  top: 0; /* Align it at the top */
-  right: 0; /* Position it on the right of the screen */
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
+  font-size: 14px;
+}
+
+
+.mainContent {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  
+}
+
+.productListing {
+  flex-grow: 1;
+  padding: 20px;
+  /* Add styles for your product listing */
 }
 
 /* Filters */
@@ -87,22 +93,31 @@ margin-top: -30px;
   font-size: 14px;
 }
 
-
-
-/* Sidebar styles for mobile */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    margin-bottom: 20px;
+  .headerContainer {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .sortDropdown {
-    margin-right: 0;
+  .rightContent {
     margin-top: 10px;
     width: 100%;
   }
 
-  .filterOptions {
+  .sortDropdown {
+    width: 100%;
+  }
+
+  .mainContent {
     flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .productListing {
+    width: 100%;
   }
 }
