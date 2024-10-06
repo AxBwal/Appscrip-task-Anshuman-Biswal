@@ -1,4 +1,4 @@
-
+/* General Header Styles */
 .header {
   padding: 20px 30px;
   background-color: white;
@@ -9,27 +9,19 @@
   justify-content: center;
 }
 
+/* Top Section: Logo, Icons, and Language Selector */
 .topSection {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; 
-}
-
-.leftSection {
-  display: flex;
-  align-items: center;
-}
-
-.menuIcon {
-  display: none; 
-  cursor: pointer;
-  margin-right: 10px; 
+  position: relative;
 }
 
 .logoImageSection {
-  flex: 0 0 auto; 
+  flex-basis: 10%; /* Adjusts the logo image section width */
+  display: flex;
+  align-items: center;
 }
 
 .logoImage {
@@ -38,18 +30,19 @@
 }
 
 .logoText {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  flex-grow: 1;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
+  position: relative;
+  left: -36px; /* Adjust to account for the logoImage's width */
 }
 
 .icons {
-  flex: 0 0 auto; 
+  flex-basis: 10%; /* Adjusts icons container width */
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 20px;
 }
 
@@ -59,14 +52,14 @@
   transition: color 0.3s ease;
 }
 
-
+/* Language Dropdown Styling */
 .languageDropdown {
   padding: 5px;
   font-size: 14px;
   cursor: pointer;
 }
 
-
+/* Navbar Styles */
 .nav {
   margin-top: 20px;
 }
@@ -77,63 +70,59 @@
   margin: 0;
   display: flex;
   justify-content: center;
-  gap: 40px; 
+  gap: 40px; /* More space between links */
 }
 
 .navItem a {
   text-decoration: none;
   color: black;
-  font-family: 'Simplon Norm', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: bold;
 }
 
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
   .topSection {
-    padding: 10px;
-    position: relative;
-  }
-
-  .menuIcon {
-    display: block; 
-  }
-
-  .leftSection {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
   }
 
+  .icons {
+    gap: 10px; /* Adjust for smaller screens */
+  }
+
+  /* Stack navigation links vertically on mobile */
+  .navList {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Icons layout in mobile */
   .logoImageSection {
-    margin-left: 10px; 
+    left: 10px;
   }
 
   .logoText {
     font-size: 20px;
-  }
-
-  .icons {
-    gap: 10px; 
+    left: 0; /* Remove the left offset for mobile */
   }
 
   .icon {
-    font-size: 20px; 
+    font-size: 20px; /* Adjust icon size for mobile */
   }
 
- 
-  .icons .faBagShopping,
-  .languageDropdown {
+  /* Hide specific icons in mobile view */
+  .icons .faUser, .icons .faBagShopping {
     display: none;
   }
 
- 
-  .nav {
-    width: 100%;
-    background-color: white;
+  /* Adjust gap between icons */
+  .icons {
+    gap: 15px;
   }
 
-  .navList {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+  .nav {
+    margin-top: 10px;
   }
 }

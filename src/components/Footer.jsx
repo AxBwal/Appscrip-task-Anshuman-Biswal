@@ -53,12 +53,14 @@ export default function Footer() {
             <span>Instagram Icon</span>
             <span>LinkedIn Icon</span>
           </div>
-        </div>
-      </div>
-      <div className={styles.bottomSection}>
-        <h3>mettā muse ACCEPTS</h3>
-        <div className={styles.paymentIcons}>
-         <img src="/assets/Frame.png" alt="" />
+
+          {/* mettā muse ACCEPTS section right below FOLLOW US */}
+          <div className={styles.mettaMuseAccepts}>
+            <h3>mettā muse ACCEPTS</h3>
+            <div className={styles.paymentIcons}>
+              <img src="/assets/Frame.png" alt="Payment Methods" />
+            </div>
+          </div>
         </div>
       </div>
       <div className={styles.copyright}>

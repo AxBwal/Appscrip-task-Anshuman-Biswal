@@ -3,7 +3,7 @@
   color: #fff;
   padding: 40px 20px;
   width: 100vw; /* Full viewport width */
-  margin: 0; /* Remove any default margin */
+  margin: 0;
   box-sizing: border-box; /* Ensure padding is included in width */
   overflow-x: hidden;
 }
@@ -11,6 +11,7 @@
 .topSection {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
   margin-bottom: 40px;
 }
 
@@ -51,11 +52,13 @@
 .middleSection {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
   margin-bottom: 40px;
 }
 
 .companyInfo, .quickLinks, .followUs {
   flex-basis: 30%;
+  margin-bottom: 20px; /* Add margin for spacing on mobile */
 }
 
 .companyInfo ul, .quickLinks ul {
@@ -77,10 +80,16 @@
   margin-bottom: 20px;
 }
 
+/* mettā muse ACCEPTS section below FOLLOW US */
+.mettaMuseAccepts {
+  margin-top: 20px;
+}
+
 .paymentIcons {
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  justify-content: flex-start;
 }
 
 .copyright {
@@ -88,12 +97,11 @@
   font-size: 0.8em;
 }
 
-
 /* Footer styles for mobile */
 @media (max-width: 768px) {
   .footer {
     padding: 20px 10px;
-    width: 100vw; /* Ensure the footer is full width on mobile */
+    width: 100vw;
   }
 
   .topSection, .middleSection, .bottomSection {
@@ -103,11 +111,25 @@
   }
 
   .newsletter, .contactInfo, .companyInfo, .quickLinks, .followUs {
-    margin-bottom: 20px;
-    width: 100%; /* Make sections full width */
+    width: 100%; /* Ensure full-width sections */
   }
 
   .paymentIcons {
     justify-content: center;
+  }
+
+  /* Collapsible sections */
+  .companyInfo ul, .quickLinks ul, .followUs {
+    display: none;
+  }
+
+  .companyInfo h3, .quickLinks h3, .followUs h3 {
+    cursor: pointer;
+  }
+
+  .companyInfo h3.active + ul,
+  .quickLinks h3.active + ul,
+  .followUs h3.active + div {
+    display: block;
   }
 }
