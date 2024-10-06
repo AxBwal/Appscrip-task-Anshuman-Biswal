@@ -19,11 +19,11 @@
 
 
 
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
- 
 }
 
 body {
@@ -45,4 +45,11 @@ button {
 
 input, select {
   font-family: 'Simplon Norm', sans-serif;
+}
+
+/* Mobile styles - hide horizontal overflow */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
 }
