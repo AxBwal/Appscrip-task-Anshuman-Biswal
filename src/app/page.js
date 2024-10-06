@@ -1,6 +1,7 @@
 "use client";
 
 import Head from "next/head";
+import toast, { Toaster } from 'react-hot-toast';
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import ProductGrid from "../components/ProductGrid";
@@ -61,6 +62,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <Toaster />
     </div>
   );
 }
