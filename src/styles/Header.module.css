@@ -1,4 +1,4 @@
-/* General Header Styles */
+
 .header {
   padding: 20px 30px;
   background-color: white;
@@ -9,7 +9,7 @@
   justify-content: center;
 }
 
-/* Top Section: Logo, Icons, and Language Selector */
+
 .topSection {
   width: 100%;
   display: flex;
@@ -19,7 +19,7 @@
 }
 
 .logoImageSection {
-  flex-basis: 10%; /* Adjusts the logo image section width */
+  flex-basis: 10%; 
   display: flex;
   align-items: center;
 }
@@ -35,11 +35,11 @@
   font-size: 24px;
   font-weight: bold;
   position: relative;
-  left: -36px; /* Adjust to account for the logoImage's width */
+  left: -36px; 
 }
 
 .icons {
-  flex-basis: 10%; /* Adjusts icons container width */
+  flex-basis: 10%; 
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -52,14 +52,14 @@
   transition: color 0.3s ease;
 }
 
-/* Language Dropdown Styling */
+
 .languageDropdown {
   padding: 5px;
   font-size: 14px;
   cursor: pointer;
 }
 
-/* Navbar Styles */
+
 .nav {
   margin-top: 20px;
 }
@@ -70,7 +70,7 @@
   margin: 0;
   display: flex;
   justify-content: center;
-  gap: 40px; /* More space between links */
+  gap: 40px; 
 }
 
 .navItem a {
@@ -80,7 +80,7 @@
   font-weight: bold;
 }
 
-/* Responsive Styles for Mobile */
+
 @media (max-width: 768px) {
   .topSection {
     display: flex;
@@ -89,35 +89,35 @@
   }
 
   .icons {
-    gap: 10px; /* Adjust for smaller screens */
+    gap: 10px; 
   }
 
-  /* Stack navigation links vertically on mobile */
+  
   .navList {
     flex-direction: column;
     gap: 15px;
   }
 
-  /* Icons layout in mobile */
+  
   .logoImageSection {
     left: 10px;
   }
 
   .logoText {
     font-size: 20px;
-    left: 0; /* Remove the left offset for mobile */
+    left: 0; 
   }
 
   .icon {
-    font-size: 20px; /* Adjust icon size for mobile */
+    font-size: 20px; 
   }
 
-  /* Hide specific icons in mobile view */
+  
   .icons .faUser, .icons .faBagShopping {
     display: none;
   }
 
-  /* Adjust gap between icons */
+ 
   .icons {
     gap: 15px;
   }
@@ -125,4 +125,8 @@
   .nav {
     margin-top: 10px;
   }
+}
+.leftSection{
+  display: flex;
+  gap: 4px;
 }
