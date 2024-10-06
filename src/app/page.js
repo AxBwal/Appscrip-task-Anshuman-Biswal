@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import Head from "next/head";
 import toast, { Toaster } from 'react-hot-toast';
@@ -8,6 +8,7 @@ import ProductGrid from "../components/ProductGrid";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import { fetchProducts } from "../utils/api";
+import SkeletonProduct from "../components/SkeletonProduct"; 
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -62,7 +63,15 @@ export default function Home() {
 
         <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
           <Sidebar />
-          {loading ? <p>Loading...</p> : <ProductGrid products={products} />}
+          {loading ? (
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
+              {Array.from({ length: 6 }).map((_, index) => (
+                <SkeletonProduct key={index} />
+              ))}
+            </div>
+          ) : (
+            <ProductGrid products={products} />
+          )}
         </div>
       </main>
 
