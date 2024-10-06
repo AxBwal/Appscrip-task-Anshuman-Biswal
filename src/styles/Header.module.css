@@ -18,6 +18,17 @@
   position: relative; /* Needed for absolute positioning of logoText */
 }
 
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.menuIcon {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  margin-right: 10px; /* Space between menu icon and logo image */
+}
+
 .logoImageSection {
   flex: 0 0 auto; /* Prevents stretching */
 }
@@ -33,7 +44,7 @@
   transform: translateX(-50%);
   text-align: center;
   font-size: 24px;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .icons {
@@ -73,8 +84,9 @@
 .navItem a {
   text-decoration: none;
   color: black;
-  font-size: 18px;
-  font-weight: bold;
+  font-family: 'Simplon Norm', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 /* Responsive Styles for Mobile */
@@ -84,8 +96,17 @@
     position: relative;
   }
 
+  .menuIcon {
+    display: block; /* Show menu icon on mobile */
+  }
+
+  .leftSection {
+    display: flex;
+    align-items: center;
+  }
+
   .logoImageSection {
-    /* Adjustments for mobile if needed */
+    margin-left: 10px; /* Space between menu icon and logo image */
   }
 
   .logoText {
@@ -93,7 +114,7 @@
   }
 
   .icons {
-    gap: 15px; /* Adjusted gap for mobile */
+    gap: 10px; /* Adjusted gap for mobile */
   }
 
   .icon {
@@ -101,18 +122,20 @@
   }
 
   /* Hide specific icons in mobile view */
-  .icons .faUser,
-  .icons .faBagShopping {
+  .icons .faBagShopping,
+  .languageDropdown {
     display: none;
   }
 
-  /* Stack navigation links vertically on mobile */
-  .navList {
-    flex-direction: column;
-    gap: 15px;
+  /* Navigation Menu Styling for Mobile */
+  .nav {
+    width: 100%;
+    background-color: white;
   }
 
-  .nav {
-    margin-top: 10px;
+  .navList {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 }
