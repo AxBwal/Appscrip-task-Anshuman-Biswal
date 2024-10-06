@@ -22,11 +22,9 @@ export default function Header() {
         <div className={styles.icons}>
           <FontAwesomeIcon icon={faSearch} className={styles.icon} />
           <FontAwesomeIcon icon={faHeart} className={styles.icon} />
-          <FontAwesomeIcon icon={faUser} className={styles.icon} />
-          <FontAwesomeIcon icon={faShoppingCart} className={styles.icon} />
           <FontAwesomeIcon icon={faBagShopping} className={styles.icon} />
+          <FontAwesomeIcon icon={faUser} className={styles.icon} />
 
-          {/* Language Dropdown */}
           <select value={selectedLanguage} onChange={handleLanguageChange} className={styles.languageDropdown}>
             <option value="English">English</option>
             <option value="French">French</option>

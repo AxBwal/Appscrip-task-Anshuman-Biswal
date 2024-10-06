@@ -1,3 +1,43 @@
+/* General styling */
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filterBar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.filterButton, .recommendButton {
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border: none;
+  cursor: pointer;
+}
+
+.filterButton:hover, .recommendButton:hover {
+  background-color: #ddd;
+}
+
+.filterPanel {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Product Card styling */
 .card {
   border: 1px solid #eaeaea;
   border-radius: 5px;
@@ -30,31 +70,32 @@
   margin-top: auto;
 }
 
-.heartIcon {
-  font-size: 20px;
-  color: #f44336;
-  cursor: pointer;
+/* Responsive styling */
+@media (max-width: 1024px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr); /* Two products per row */
+  }
 }
 
-/* Product Card styles for mobile */
 @media (max-width: 768px) {
-  .card {
-    padding: 10px;
+  .productGrid {
+    grid-template-columns: 1fr; /* One product per row */
   }
 
-  .image {
-    height: 150px;
+  .filterBar {
+    flex-direction: column;
   }
 
-  .title {
-    font-size: 0.9rem;
+  .filterButton, .recommendButton {
+    width: 100%;
+    margin-bottom: 10px;
   }
 
-  .price {
-    font-size: 1rem;
+  .filterPanel {
+    display: none; /* Hide filter by default */
   }
 
-  .heartIcon {
-    font-size: 20px;
+  .showFilter .filterPanel {
+    display: block; /* Show filter on click */
   }
 }

@@ -1,25 +1,25 @@
+/* General Header Styles */
 .header {
-  padding: 10px 30px;
+  padding: 20px 30px;
   background-color: white;
   border-bottom: 1px solid #e5e5e5;
-}
-
-.topSection {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  position: relative;
+  justify-content: center;
 }
 
-.hamburger {
-  display: none; /* Hidden on larger screens */
-  font-size: 24px;
-  cursor: pointer;
+/* Top Section: Logo, Icons, and Language Selector */
+.topSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Align items to left and right */
+  align-items: center;
+  position: relative; /* Needed for absolute positioning of logoText */
 }
 
 .logoImageSection {
-  position: absolute;
-  left: 0;
+  flex: 0 0 auto; /* Prevents stretching */
 }
 
 .logoImage {
@@ -28,77 +28,91 @@
 }
 
 .logoText {
-  flex-grow: 1;
+  position: absolute; /* Allows centering independently of flex items */
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: bold; 
 }
 
 .icons {
+  flex: 0 0 auto; /* Prevents stretching */
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .icon {
   font-size: 18px;
   cursor: pointer;
-  transition: color 0.3s ease; /* Smooth color transition */
+  transition: color 0.3s ease;
 }
 
-.liked {
-  color: #f44336; /* Red when liked */
+/* Language Dropdown Styling */
+.languageDropdown {
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-/* Default navigation style (visible on larger screens) */
+/* Navbar Styles */
 .nav {
-  display: block;
+  margin-top: 20px;
 }
 
 .navList {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; /* Horizontal layout for larger screens */
+  display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px; /* More space between links */
 }
 
 .navItem a {
   text-decoration: none;
   color: black;
   font-size: 18px;
+  font-weight: bold;
 }
 
-.heartIcon {
-  font-size: 20px;
-  color: #eaeaea;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.heartWrapper {
-  position: relative;
-}
-
-/* Navigation for mobile screens - hidden by default */
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block; /* Show the hamburger icon on mobile */
+  .topSection {
+    padding: 10px;
+    position: relative;
+  }
+
+  .logoImageSection {
+    /* Adjustments for mobile if needed */
+  }
+
+  .logoText {
+    font-size: 20px;
+  }
+
+  .icons {
+    gap: 15px; /* Adjusted gap for mobile */
+  }
+
+  .icon {
+    font-size: 20px; /* Adjust icon size for mobile */
+  }
+
+  /* Hide specific icons in mobile view */
+  .icons .faUser,
+  .icons .faBagShopping {
+    display: none;
+  }
+
+  /* Stack navigation links vertically on mobile */
+  .navList {
+    flex-direction: column;
+    gap: 15px;
   }
 
   .nav {
-    display: none; /* Hidden on mobile by default */
-  }
-
-  .navVisible {
-    display: block; /* Toggle this with JS to show/hide */
-    text-align: center;
     margin-top: 10px;
-  }
-
-  .navList {
-    flex-direction: column; /* Stack links vertically */
-    gap: 10px;
   }
 }
